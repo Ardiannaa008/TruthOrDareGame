@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://ghsu4t0wlgfn"]
+
+[ext_resource type="Script" uid="uid://dsq0jgl70s6gw" path="res://scripts/PlayerSetup.gd" id="1_412kp"]
+[ext_resource type="FontFile" uid="uid://m8fsnwreikvx" path="res://assets/PixelOperator8.ttf" id="2_ksabq"]
+[ext_resource type="FontFile" uid="uid://oy5cqo7iv8gg" path="res://assets/PixelOperator8-Bold.ttf" id="3_3iesa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_weliq"]
+bg_color = Color(0.273873, 0.273873, 0.273873, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksabq"]
+bg_color = Color(0.702217, 0.266203, 0.819475, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qp44s"]
+bg_color = Color(0.796078, 0.423529, 0.901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3iesa"]
+bg_color = Color(0.027451, 0.121569, 0.176471, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kgxj"]
+bg_color = Color(0.0392157, 0.14902, 0.215686, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PlayerSetup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_412kp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 722.0
+offset_bottom = 1272.0
+color = Color(0.0313726, 0.0745098, 0.109804, 1)
+
+[node name="PlayerNameInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 270.0
+offset_right = 574.0
+offset_bottom = 340.0
+theme_override_fonts/font = ExtResource("2_ksabq")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_weliq")
+placeholder_text = "Player name"
+alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 108.0
+offset_right = 680.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(0.796078, 0.423529, 0.901961, 1)
+theme_override_fonts/font = ExtResource("2_ksabq")
+theme_override_font_sizes/font_size = 21
+text = "Enter Players name and tap Add Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 997.0
+offset_right = 589.0
+offset_bottom = 1088.0
+theme_override_colors/font_color = Color(0, 0.00977175, 0.164289, 1)
+theme_override_fonts/font = ExtResource("3_3iesa")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/hover = SubResource("StyleBoxFlat_ksabq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qp44s")
+text = "Start game"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 523.0
+offset_right = 641.0
+offset_bottom = 903.0
+
+[node name="PlayerList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="AddPlayerButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 386.0
+offset_right = 521.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_ksabq")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxFlat_3iesa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8kgxj")
+text = "Add Player"
+
+[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="AddPlayerButton" to="." method="_on_add_player_button_pressed"]

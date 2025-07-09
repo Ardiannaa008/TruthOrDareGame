@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://cl8x5lhtjel27"]
+
+[ext_resource type="Script" uid="uid://dgr77csc3tuad" path="res://scripts/StartScreen.gd" id="1_tx5wa"]
+[ext_resource type="Texture2D" uid="uid://baeqcktifcyqq" path="res://assets/Truth-removebg-preview.png" id="2_o7i0r"]
+[ext_resource type="FontFile" uid="uid://m8fsnwreikvx" path="res://assets/PixelOperator8.ttf" id="3_he1sj"]
+
+[sub_resource type="Theme" id="Theme_o7i0r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2jwc"]
+bg_color = Color(0.0274035, 0.120864, 0.178359, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_he1sj"]
+bg_color = Color(0.0411002, 0.14722, 0.216331, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="start_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 9.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx5wa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -5.0
+offset_right = 724.0
+offset_bottom = 1268.0
+color = Color(0.0308895, 0.0734987, 0.109371, 1)
+
+[node name="Label" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 336.0
+offset_right = 639.0
+offset_bottom = 836.0
+texture = ExtResource("2_o7i0r")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 855.0
+offset_right = 535.0
+offset_bottom = 970.0
+theme = SubResource("Theme_o7i0r")
+theme_override_colors/font_disabled_color = Color(0.494118, 0.815686, 0.768627, 1)
+theme_override_fonts/font = ExtResource("3_he1sj")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_r2jwc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_he1sj")
+text = "Start"
+icon_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
