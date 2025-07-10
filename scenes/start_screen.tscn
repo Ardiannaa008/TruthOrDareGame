@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cl8x5lhtjel27"]
+[gd_scene load_steps=8 format=3 uid="uid://cl8x5lhtjel27"]
 
 [ext_resource type="Script" uid="uid://dgr77csc3tuad" path="res://scripts/StartScreen.gd" id="1_tx5wa"]
 [ext_resource type="Texture2D" uid="uid://baeqcktifcyqq" path="res://assets/Truth-removebg-preview.png" id="2_o7i0r"]
@@ -8,6 +8,17 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2jwc"]
 bg_color = Color(0.0274035, 0.120864, 0.178359, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hm208"]
+bg_color = Color(0.027451, 0.121569, 0.176471, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -67,6 +78,7 @@ theme_override_colors/font_disabled_color = Color(0.494118, 0.815686, 0.768627, 
 theme_override_fonts/font = ExtResource("3_he1sj")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/hover = SubResource("StyleBoxFlat_r2jwc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hm208")
 theme_override_styles/normal = SubResource("StyleBoxFlat_he1sj")
 text = "Start"
 icon_alignment = 1
