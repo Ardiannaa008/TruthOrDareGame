@@ -12,6 +12,8 @@ func _ready():
 
 	turn_label.text = "%s chose %s! Spin the wheel." % [player, choice]
 	update_player_label()
+	
+	
 
 	if choice == "Truth":
 		truth_wheel.visible = true
@@ -31,6 +33,7 @@ func spin_wheel(wheel: Node):
 	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 	tween.connect("finished", on_spin_finished)
+	
 
 func on_spin_finished():
 	print("Wheel stopped!")

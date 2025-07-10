@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd51ufcqod8nc"]
+
+[ext_resource type="Script" uid="uid://buybgi82047x8" path="res://scripts/select_truth_dare.gd" id="1_d5fde"]
+[ext_resource type="FontFile" uid="uid://m8fsnwreikvx" path="res://assets/PixelOperator8.ttf" id="2_jwnva"]
+[ext_resource type="FontFile" uid="uid://oy5cqo7iv8gg" path="res://assets/PixelOperator8-Bold.ttf" id="3_1wnqd"]
+
+[node name="SelectTruthDare" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d5fde")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+offset_left = 188.0
+offset_top = 29.0
+offset_right = 514.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_jwnva")
+theme_override_font_sizes/font_size = 18
+text = "Select Truths & Dares"
+horizontal_alignment = 1
+
+[node name="Truths" type="Label" parent="."]
+layout_mode = 2
+offset_left = 40.0
+offset_top = 139.0
+offset_right = 287.0
+offset_bottom = 182.0
+theme_override_fonts/font = ExtResource("3_1wnqd")
+theme_override_font_sizes/font_size = 24
+text = "Truths"
+
+[node name="TruthList" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 21.0
+offset_top = 182.0
+offset_right = 700.0
+offset_bottom = 448.0
+
+[node name="AddTruth" type="Button" parent="."]
+layout_mode = 2
+offset_left = 44.0
+offset_top = 471.0
+offset_right = 685.0
+offset_bottom = 524.0
+theme_override_fonts/font = ExtResource("3_1wnqd")
+theme_override_font_sizes/font_size = 18
+text = "+ Add Truth"
+
+[node name="Dares" type="Label" parent="."]
+layout_mode = 2
+offset_left = 41.0
+offset_top = 570.0
+offset_right = 272.0
+offset_bottom = 621.0
+theme_override_fonts/font = ExtResource("3_1wnqd")
+theme_override_font_sizes/font_size = 24
+text = "Dares
+"
+
+[node name="DareList" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 595.0
+offset_right = 684.0
+offset_bottom = 790.0
+
+[node name="AddDare" type="Button" parent="."]
+layout_mode = 2
+offset_left = 32.0
+offset_top = 1053.0
+offset_right = 682.0
+offset_bottom = 1118.0
+theme_override_fonts/font = ExtResource("3_1wnqd")
+theme_override_font_sizes/font_size = 18
+text = "+ Add Dare"
+
+[node name="GoToPlayersPage" type="Button" parent="."]
+layout_mode = 2
+offset_left = 387.0
+offset_top = 1169.0
+offset_right = 686.0
+offset_bottom = 1238.0
+theme_override_fonts/font = ExtResource("3_1wnqd")
+theme_override_font_sizes/font_size = 18
+text = "-> Players Page"
+
+[connection signal="pressed" from="AddTruth" to="." method="_on_add_truth_pressed"]
+[connection signal="pressed" from="AddDare" to="." method="_on_add_dare_pressed"]
+[connection signal="pressed" from="GoToPlayersPage" to="." method="_on_go_to_players_page_pressed"]

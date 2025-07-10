@@ -62,12 +62,9 @@ offset_right = 717.0
 offset_bottom = 1270.0
 color = Color(0.0313726, 0.0745098, 0.109804, 1)
 
-[node name="WheelContainer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+[node name="WheelContainer" type="Node2D" parent="."]
 
 [node name="DareWheel" type="TextureRect" parent="WheelContainer"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -83,7 +80,6 @@ pivot_offset = Vector2(327, 327)
 texture = ExtResource("2_lbhrr")
 
 [node name="TruthWheel" type="TextureRect" parent="WheelContainer"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -100,7 +96,6 @@ texture = ExtResource("3_iywne")
 
 [node name="Pointer" type="TextureRect" parent="WheelContainer"]
 z_index = 1
-layout_mode = 0
 offset_left = 95.0
 offset_top = 224.0
 offset_right = 595.0
@@ -109,7 +104,6 @@ texture = ExtResource("3_lbhrr")
 stretch_mode = 2
 
 [node name="SpinButton" type="Button" parent="WheelContainer"]
-layout_mode = 0
 offset_left = 205.0
 offset_top = 835.0
 offset_right = 527.0
@@ -123,7 +117,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gee14")
 text = "Spin"
 
 [node name="NextPlayer" type="Button" parent="WheelContainer"]
-layout_mode = 0
 offset_left = 429.0
 offset_top = 1104.0
 offset_right = 677.0
