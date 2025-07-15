@@ -83,6 +83,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_he1sj")
 text = "Start"
 icon_alignment = 1
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
