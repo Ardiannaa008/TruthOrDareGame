@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3mtd4qql07ap"]
+[gd_scene load_steps=12 format=3 uid="uid://d3mtd4qql07ap"]
 
 [ext_resource type="Script" uid="uid://r5uefevdalpv" path="res://scripts/game.gd" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://b0xxr68pnlauq" path="res://assets/DareWheel.png" id="2_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://c6s751pvqh4ct" path="res://assets/TruthWheel.png" id="3_iywne"]
 [ext_resource type="Texture2D" uid="uid://cw0yq6jqcongf" path="res://assets/pointerForSpin.png" id="3_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://caonjj28ugt8l" path="res://assets/What_s_the_most_childish_thing_you_still_do__1_-removebg-preview.png" id="3_p57ef"]
+[ext_resource type="Texture2D" uid="uid://crj24hy2nnqxu" path="res://assets/What_s_the_most_childish_thing_you_still_do-removebg-preview.png" id="4_p57ef"]
 [ext_resource type="FontFile" uid="uid://oy5cqo7iv8gg" path="res://assets/PixelOperator8-Bold.ttf" id="5_p57ef"]
 [ext_resource type="FontFile" uid="uid://m8fsnwreikvx" path="res://assets/PixelOperator8.ttf" id="6_u5sy4"]
+
+[sub_resource type="GDScript" id="GDScript_u5sy4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
 bg_color = Color(0.245056, 0.531483, 0.928756, 1)
@@ -62,7 +64,20 @@ offset_right = 717.0
 offset_bottom = 1270.0
 color = Color(0.0313726, 0.0745098, 0.109804, 1)
 
+[node name="TurnLabel" type="Label" parent="."]
+offset_left = 84.0
+offset_top = 147.0
+offset_right = 646.0
+offset_bottom = 220.0
+size_flags_vertical = 1
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = ExtResource("6_u5sy4")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [node name="WheelContainer" type="Node2D" parent="."]
+script = SubResource("GDScript_u5sy4")
 
 [node name="DareWheel" type="TextureRect" parent="WheelContainer"]
 anchors_preset = 8
@@ -77,7 +92,99 @@ offset_bottom = 857.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(327, 327)
-texture = ExtResource("2_lbhrr")
+texture = ExtResource("3_p57ef")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 220.0
+offset_right = 492.0
+offset_bottom = 291.0
+rotation = -1.07594
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 14
+text = "Speak in a fake accent until your next turn."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 276.0
+offset_right = 580.0
+offset_bottom = 373.0
+rotation = -0.64078
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 14
+text = "Let someone in the group write something on your forehead "
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 332.0
+offset_right = 595.0
+offset_bottom = 403.0
+rotation = 0.457121
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 14
+text = "Spin around 10 times and try to walk straight."
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 403.0
+offset_right = 554.0
+offset_bottom = 474.0
+rotation = 1.18612
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Dance like a ballerina for 30 seconds."
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 417.0
+offset_right = 515.0
+offset_bottom = 514.0
+rotation = -4.21353
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Post a random selfie on your story without context."
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 404.0
+offset_right = 418.0
+offset_bottom = 485.0
+rotation = -3.39158
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Call someone and sing “Happy Birthday” to them."
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 317.0
+offset_right = 388.0
+offset_bottom = 388.0
+rotation = -2.55932
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Draw a mustache on your face "
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="WheelContainer/DareWheel"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 245.0
+offset_right = 419.0
+offset_bottom = 316.0
+rotation = -1.9664
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 14
+text = "Show your last five photos in your gallery."
 
 [node name="TruthWheel" type="TextureRect" parent="WheelContainer"]
 anchors_preset = 8
@@ -85,21 +192,128 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 23.0
-offset_top = 200.0
-offset_right = 677.0
-offset_bottom = 854.0
+offset_left = 27.0
+offset_top = 198.0
+offset_right = 681.0
+offset_bottom = 852.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(327, 327)
-texture = ExtResource("3_iywne")
+texture = ExtResource("4_p57ef")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 247.0
+offset_right = 557.0
+offset_bottom = 316.0
+rotation = -0.392881
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 16
+text = "Whats the most childish thing you still do?"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 329.0
+offset_right = 621.0
+offset_bottom = 409.0
+rotation = 0.408635
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 16
+text = "Who  would you  want to switch lives with for a day?"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 400.0
+offset_right = 554.0
+offset_bottom = 473.0
+rotation = 1.19039
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+theme_override_font_sizes/normal_font_size = 16
+text = "What's the worst gift you’ve ever received"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 445.0
+offset_right = 459.0
+offset_bottom = 525.0
+rotation = 2.0288
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "What would your DJ name be?"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 382.0
+offset_right = 484.0
+offset_bottom = 468.0
+rotation = -3.42084
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Who here would you NOT trust with a secret?"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 321.0
+offset_right = 362.0
+offset_bottom = 401.0
+rotation = -2.74014
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Which ocean is the biggest?"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 245.0
+offset_right = 394.0
+offset_bottom = 325.0
+rotation = -2.03305
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "What’s the currency used in Japan?"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="WheelContainer/TruthWheel"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 217.0
+offset_right = 478.0
+offset_bottom = 297.0
+rotation = -1.15445
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_u5sy4")
+text = "Whats your obsession lately?"
+fit_content = true
+scroll_active = false
 
 [node name="Pointer" type="TextureRect" parent="WheelContainer"]
 z_index = 1
-offset_left = 95.0
-offset_top = 224.0
-offset_right = 595.0
-offset_bottom = 724.0
+offset_left = 104.0
+offset_top = 220.0
+offset_right = 604.0
+offset_bottom = 720.0
 texture = ExtResource("3_lbhrr")
 stretch_mode = 2
 
@@ -124,18 +338,6 @@ offset_bottom = 1179.0
 theme_override_fonts/font = ExtResource("6_u5sy4")
 theme_override_font_sizes/font_size = 28
 text = "Next"
-
-[node name="TurnLabel" type="Label" parent="."]
-offset_left = 84.0
-offset_top = 147.0
-offset_right = 646.0
-offset_bottom = 220.0
-size_flags_vertical = 1
-theme_override_constants/line_spacing = 2
-theme_override_fonts/font = ExtResource("6_u5sy4")
-theme_override_font_sizes/font_size = 18
-horizontal_alignment = 1
-autowrap_mode = 3
 
 [connection signal="pressed" from="WheelContainer/SpinButton" to="." method="_on_spin_button_pressed"]
 [connection signal="pressed" from="WheelContainer/NextPlayer" to="." method="_on_next_player_pressed"]
